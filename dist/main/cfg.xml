@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <DA_HOST>localhost</DA_HOST>
+    <DA_NAME>Matrikon.OPC.Simulation.1</DA_NAME>
+    <UA_HOST>opc.tcp://127.0.0.1:4850</UA_HOST>
+    <UA_SERVER_NAME></UA_SERVER_NAME>
+    <UA_ROOT_NAMESPACE>root1</UA_ROOT_NAMESPACE>
+    <UPDATE_RATE>500</UPDATE_RATE> <!--ms-->
+    <MODE>SERVER</MODE>
+    <FILENAME>MonitorItemTags.xls</FILENAME>
+    <SHEET>output_sheet</SHEET>
+</configuration>

@@ -1,0 +1,471 @@
+[
+    {
+        "Name": "Simulation Items",
+        "Type": "folder",
+        "BrancheArray": [
+            {
+                "Name": "Bucket Brigade",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Bucket Brigade.Boolean",
+                        "Type": "value",
+                        "Value": false
+                    },
+                    {
+                        "Name": "Bucket Brigade.Int1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Bucket Brigade.Int2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Bucket Brigade.Int4",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Bucket Brigade.Real4",
+                        "Type": "value",
+                        "Value": 0.0
+                    },
+                    {
+                        "Name": "Bucket Brigade.Real8",
+                        "Type": "value",
+                        "Value": 0.0
+                    },
+                    {
+                        "Name": "Bucket Brigade.String",
+                        "Type": "value",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "Bucket Brigade.UInt1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Bucket Brigade.UInt2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Bucket Brigade.UInt4",
+                        "Type": "value",
+                        "Value": 0.0
+                    }
+                ]
+            },
+            {
+                "Name": "Random",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Random.Boolean",
+                        "Type": "value",
+                        "Value": true
+                    },
+                    {
+                        "Name": "Random.Int1",
+                        "Type": "value",
+                        "Value": 95
+                    },
+                    {
+                        "Name": "Random.Int2",
+                        "Type": "value",
+                        "Value": 5705
+                    },
+                    {
+                        "Name": "Random.Int4",
+                        "Type": "value",
+                        "Value": 28145
+                    },
+                    {
+                        "Name": "Random.Qualities",
+                        "Type": "value",
+                        "Value": 1
+                    },
+                    {
+                        "Name": "Random.Real4",
+                        "Type": "value",
+                        "Value": 13751.0244140625
+                    },
+                    {
+                        "Name": "Random.Real8",
+                        "Type": "value",
+                        "Value": 5073.986076810001
+                    },
+                    {
+                        "Name": "Random.String",
+                        "Type": "value",
+                        "Value": "Today"
+                    },
+                    {
+                        "Name": "Random.UInt1",
+                        "Type": "value",
+                        "Value": 4
+                    },
+                    {
+                        "Name": "Random.UInt2",
+                        "Type": "value",
+                        "Value": 2995
+                    },
+                    {
+                        "Name": "Random.UInt4",
+                        "Type": "value",
+                        "Value": 11942.0
+                    }
+                ]
+            },
+            {
+                "Name": "Read Error",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Read Error.ArrayOfReal8",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.ArrayOfString",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Boolean",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Int1",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Int2",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Int4",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Money",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Real4",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Real8",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.String",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.Time",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.UInt1",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.UInt2",
+                        "Type": "value",
+                        "Value": -1073479676
+                    },
+                    {
+                        "Name": "Read Error.UInt4",
+                        "Type": "value",
+                        "Value": -1073479676
+                    }
+                ]
+            },
+            {
+                "Name": "Saw-toothed Waves",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Saw-toothed Waves.Int1",
+                        "Type": "value",
+                        "Value": 1
+                    },
+                    {
+                        "Name": "Saw-toothed Waves.Int2",
+                        "Type": "value",
+                        "Value": 2
+                    },
+                    {
+                        "Name": "Saw-toothed Waves.Int4",
+                        "Type": "value",
+                        "Value": 12345
+                    },
+                    {
+                        "Name": "Saw-toothed Waves.Real4",
+                        "Type": "value",
+                        "Value": 2.5399999618530273
+                    },
+                    {
+                        "Name": "Saw-toothed Waves.Real8",
+                        "Type": "value",
+                        "Value": 3.14159268452
+                    },
+                    {
+                        "Name": "Saw-toothed Waves.UInt1",
+                        "Type": "value",
+                        "Value": 1
+                    },
+                    {
+                        "Name": "Saw-toothed Waves.UInt2",
+                        "Type": "value",
+                        "Value": 2
+                    },
+                    {
+                        "Name": "Saw-toothed Waves.UInt4",
+                        "Type": "value",
+                        "Value": 9876.0
+                    }
+                ]
+            },
+            {
+                "Name": "Square Waves",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Square Waves.Boolean",
+                        "Type": "value",
+                        "Value": true
+                    },
+                    {
+                        "Name": "Square Waves.Int1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Square Waves.Int2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Square Waves.Int4",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Square Waves.Real4",
+                        "Type": "value",
+                        "Value": -0.0
+                    },
+                    {
+                        "Name": "Square Waves.Real8",
+                        "Type": "value",
+                        "Value": -0.0
+                    },
+                    {
+                        "Name": "Square Waves.UInt1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Square Waves.UInt2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Square Waves.UInt4",
+                        "Type": "value",
+                        "Value": 0.0
+                    }
+                ]
+            },
+            {
+                "Name": "Triangle Waves",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Triangle Waves.Int1",
+                        "Type": "value",
+                        "Value": 1
+                    },
+                    {
+                        "Name": "Triangle Waves.Int2",
+                        "Type": "value",
+                        "Value": 2
+                    },
+                    {
+                        "Name": "Triangle Waves.Int4",
+                        "Type": "value",
+                        "Value": 12345
+                    },
+                    {
+                        "Name": "Triangle Waves.Real4",
+                        "Type": "value",
+                        "Value": 2.5399999618530273
+                    },
+                    {
+                        "Name": "Triangle Waves.Real8",
+                        "Type": "value",
+                        "Value": 3.14159268452
+                    },
+                    {
+                        "Name": "Triangle Waves.UInt1",
+                        "Type": "value",
+                        "Value": 1
+                    },
+                    {
+                        "Name": "Triangle Waves.UInt2",
+                        "Type": "value",
+                        "Value": 2
+                    },
+                    {
+                        "Name": "Triangle Waves.UInt4",
+                        "Type": "value",
+                        "Value": 9876.0
+                    }
+                ]
+            },
+            {
+                "Name": "Write Error",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Write Error.Boolean",
+                        "Type": "value",
+                        "Value": false
+                    },
+                    {
+                        "Name": "Write Error.Int1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Error.Int2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Error.Int4",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Error.Real4",
+                        "Type": "value",
+                        "Value": 0.0
+                    },
+                    {
+                        "Name": "Write Error.Real8",
+                        "Type": "value",
+                        "Value": 0.0
+                    },
+                    {
+                        "Name": "Write Error.String",
+                        "Type": "value",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "Write Error.UInt1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Error.UInt2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Error.UInt4",
+                        "Type": "value",
+                        "Value": 0.0
+                    }
+                ]
+            },
+            {
+                "Name": "Write Only",
+                "Type": "folder",
+                "BrancheArray": [],
+                "LeafArray": [
+                    {
+                        "Name": "Write Only.Boolean",
+                        "Type": "value",
+                        "Value": false
+                    },
+                    {
+                        "Name": "Write Only.Int1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Only.Int2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Only.Int4",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Only.Real4",
+                        "Type": "value",
+                        "Value": 0.0
+                    },
+                    {
+                        "Name": "Write Only.Real8",
+                        "Type": "value",
+                        "Value": 0.0
+                    },
+                    {
+                        "Name": "Write Only.String",
+                        "Type": "value",
+                        "Value": ""
+                    },
+                    {
+                        "Name": "Write Only.UInt1",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Only.UInt2",
+                        "Type": "value",
+                        "Value": 0
+                    },
+                    {
+                        "Name": "Write Only.UInt4",
+                        "Type": "value",
+                        "Value": 0.0
+                    }
+                ]
+            }
+        ],
+        "LeafArray": []
+    },
+    {
+        "Name": "Configured Aliases",
+        "Type": "folder",
+        "BrancheArray": [],
+        "LeafArray": []
+    }
+]
