@@ -36,7 +36,7 @@ def regsvr():
         return reg_clsid[0]
     except Exception as err:
         print('Error: ', err)
-        LOGS('dcom_da/regsvr', 'Ошибка: Проверьте права пользователя для регистрации', 'ERROR', exc_info=True)
+        LOGS('dcom_da/regsvr', 'Ошибка: Проверьте права пользователя для регистрации', 'ERROR')
         return False
 
 def get_clsid():
