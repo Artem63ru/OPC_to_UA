@@ -6,7 +6,7 @@
     <UA_SERVER_NAME>GAS</UA_SERVER_NAME>
     <UA_ROOT_NAMESPACE>root1</UA_ROOT_NAMESPACE>
     <UPDATE_RATE>500</UPDATE_RATE> <!--ms-->
-    <MODE>SERVER</MODE>
+    <MODE>FILE</MODE>
     <FILENAME>MonitorItemTags.xls</FILENAME>
     <SHEET>output_sheet</SHEET>
 </configuration>
