@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, "..")
 from opcua import ua, Server
 from opcua.ua import NodeIdType, NodeId
-
+from log.LOGS import LOGS
 from converter.UpdateEventHandle import get_ua_type
 
 
@@ -59,7 +59,13 @@ class UA_SERVER:
         return True
 
     def stop(self):
+        LOGS('UA_SERVER', 'Остановка UA SERVER', 'INFO')
         self.server.stop()
 
     def start(self):
-        self.server.start()
+        LOGS('UA_SERVER', 'Запуск UA SERVER', 'INFO')
+        try:
+            self.server.start()
+        except OSError:
+            LOGS('UA_SERVER', 'Ошибка: Возможно работает еще один конвертор', 'ERROR')
+            sys.exit()

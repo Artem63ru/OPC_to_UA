@@ -2,6 +2,7 @@ from tkinter import *
 import sys
 import argparse
 import xml.etree.ElementTree as ET
+from log.LOGS import LOGS
 
 
 def get_config(configFile='cfg.xml'):
@@ -15,6 +16,7 @@ def get_config(configFile='cfg.xml'):
 
 
 def run():
+    LOGS('Converter/run', 'запуск конвертора', 'INFO')
     _old_excepthook = sys.excepthook
 
     def end_program():
@@ -28,7 +30,6 @@ def run():
 
     sys.excepthook = on_exit_by_ctrl_c
 
-
     parser = argparse.ArgumentParser(description='A tutorial of argparse!')
     # parser.add_argument("--m", default='savetags', help="Mode of work (config or other)")
     parser.add_argument("--m", default='config', help="Mode of work (config or other)")
@@ -38,7 +39,7 @@ def run():
 
     args = parser.parse_args()
 
-    if args.m=='config':
+    if args.m == 'config':
         from dcom_da.DA_CLIENT import DA_CLIENT
         from UA_SERVER.UA_SERVER import UA_SERVER
         from .UpdateEventHandle import UpdateEventHandler
@@ -61,11 +62,12 @@ def run():
 
 
 
-    elif args.m=='servlist':
+    elif args.m == 'servlist':
         from dcom_da.regsvr import get_serv_list
         get_serv_list()
+        LOGS('main_servlist', 'Выход из программы', 'INFO')
         sys.exit()
-    elif args.m=='savetags':
+    elif args.m == 'savetags':
         from dcom_da.DA_CLIENT import DA_CLIENT
         from .UpdateEventHandle import UpdateEventHandler
         # da_client=DA_CLIENT(host=args.dh, server_name=args.dn)
@@ -77,25 +79,21 @@ def run():
         da_client.GetTree()
         da_client.SaveMonitorItemList()
         da_client.Disconnect()
-
+        LOGS('main_savetags', 'Выход из программы', 'INFO')
         sys.exit()
-    elif args.m=='savetree':
+    elif args.m == 'savetree':
         from dcom_da.DA_CLIENT import DA_CLIENT
         da_client = DA_CLIENT(host=args.dh, server_name=args.dn)
         da_client.Connect()
         da_client.GetTree()
         da_client.Disconnect()
-
+        LOGS('main_savetree', 'Выход из программы', 'INFO')
         sys.exit()
-    elif args.m=='reg':
+
+
+    elif args.m == 'reg':
         from dcom_da.regsvr import regsvr
         regsvr()
-
+        LOGS('main_reg', 'Выход из программы', 'INFO')
         sys.exit()
-
-
-
-
-
-
 

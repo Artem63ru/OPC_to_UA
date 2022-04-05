@@ -68,57 +68,72 @@
                     {
                         "Name": "Random.Boolean",
                         "Type": "value",
-                        "Value": true
+                        "Value": false
                     },
                     {
                         "Name": "Random.Int1",
                         "Type": "value",
-                        "Value": 95
+                        "Value": 1
                     },
                     {
                         "Name": "Random.Int2",
                         "Type": "value",
-                        "Value": 5705
+                        "Value": 31666
                     },
                     {
                         "Name": "Random.Int4",
                         "Type": "value",
-                        "Value": 28145
+                        "Value": 18020
+                    },
+                    {
+                        "Name": "Random.LongLong",
+                        "Type": "value",
+                        "Value": 19195
                     },
                     {
                         "Name": "Random.Qualities",
                         "Type": "value",
-                        "Value": 1
+                        "Value": 3328
                     },
                     {
                         "Name": "Random.Real4",
                         "Type": "value",
-                        "Value": 13751.0244140625
+                        "Value": 9460.724609375
                     },
                     {
                         "Name": "Random.Real8",
                         "Type": "value",
-                        "Value": 5073.986076810001
+                        "Value": 16016.089772820002
+                    },
+                    {
+                        "Name": "Random.Ref",
+                        "Type": "value",
+                        "Value": 9193
                     },
                     {
                         "Name": "Random.String",
                         "Type": "value",
-                        "Value": "Today"
+                        "Value": "us"
                     },
                     {
                         "Name": "Random.UInt1",
                         "Type": "value",
-                        "Value": 4
+                        "Value": 84
                     },
                     {
                         "Name": "Random.UInt2",
                         "Type": "value",
-                        "Value": 2995
+                        "Value": 12065
                     },
                     {
                         "Name": "Random.UInt4",
                         "Type": "value",
-                        "Value": 11942.0
+                        "Value": 18470.0
+                    },
+                    {
+                        "Name": "Random.ULongLong",
+                        "Type": "value",
+                        "Value": 30729
                     }
                 ]
             },
@@ -207,42 +222,42 @@
                     {
                         "Name": "Saw-toothed Waves.Int1",
                         "Type": "value",
-                        "Value": 1
+                        "Value": -60
                     },
                     {
                         "Name": "Saw-toothed Waves.Int2",
                         "Type": "value",
-                        "Value": 2
+                        "Value": 66
                     },
                     {
                         "Name": "Saw-toothed Waves.Int4",
                         "Type": "value",
-                        "Value": 12345
+                        "Value": 333315
                     },
                     {
                         "Name": "Saw-toothed Waves.Real4",
                         "Type": "value",
-                        "Value": 2.5399999618530273
+                        "Value": 53.34001159667969
                     },
                     {
                         "Name": "Saw-toothed Waves.Real8",
                         "Type": "value",
-                        "Value": 3.14159268452
+                        "Value": 166.50441227956
                     },
                     {
                         "Name": "Saw-toothed Waves.UInt1",
                         "Type": "value",
-                        "Value": 1
+                        "Value": 141
                     },
                     {
                         "Name": "Saw-toothed Waves.UInt2",
                         "Type": "value",
-                        "Value": 2
+                        "Value": 66
                     },
                     {
                         "Name": "Saw-toothed Waves.UInt4",
                         "Type": "value",
-                        "Value": 9876.0
+                        "Value": 562932.0
                     }
                 ]
             },
@@ -254,7 +269,7 @@
                     {
                         "Name": "Square Waves.Boolean",
                         "Type": "value",
-                        "Value": true
+                        "Value": false
                     },
                     {
                         "Name": "Square Waves.Int1",
@@ -274,12 +289,12 @@
                     {
                         "Name": "Square Waves.Real4",
                         "Type": "value",
-                        "Value": -0.0
+                        "Value": 0.0
                     },
                     {
                         "Name": "Square Waves.Real8",
                         "Type": "value",
-                        "Value": -0.0
+                        "Value": 0.0
                     },
                     {
                         "Name": "Square Waves.UInt1",
@@ -306,42 +321,42 @@
                     {
                         "Name": "Triangle Waves.Int1",
                         "Type": "value",
-                        "Value": 1
+                        "Value": 25
                     },
                     {
                         "Name": "Triangle Waves.Int2",
                         "Type": "value",
-                        "Value": 2
+                        "Value": 98
                     },
                     {
                         "Name": "Triangle Waves.Int4",
                         "Type": "value",
-                        "Value": 12345
+                        "Value": 234555
                     },
                     {
                         "Name": "Triangle Waves.Real4",
                         "Type": "value",
-                        "Value": 2.5399999618530273
+                        "Value": 33.02000427246094
                     },
                     {
                         "Name": "Triangle Waves.Real8",
                         "Type": "value",
-                        "Value": 3.14159268452
+                        "Value": 59.690261005879975
                     },
                     {
                         "Name": "Triangle Waves.UInt1",
                         "Type": "value",
-                        "Value": 1
+                        "Value": 123
                     },
                     {
                         "Name": "Triangle Waves.UInt2",
                         "Type": "value",
-                        "Value": 2
+                        "Value": 140
                     },
                     {
                         "Name": "Triangle Waves.UInt4",
                         "Type": "value",
-                        "Value": 9876.0
+                        "Value": 207396.0
                     }
                 ]
             },

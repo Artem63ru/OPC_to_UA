@@ -1,0 +1,240 @@
+2022-04-04 11:33:48,595 - INFO - Converter/run - запуск конвертора
+2022-04-04 11:33:52,348 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 11:33:52,358 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 11:33:52,709 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:33:52,709 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:33:53,923 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 11:33:53,924 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:33:53,924 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:33:53,927 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:53,930 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:53,930 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:53,932 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:53,932 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:53,932 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,168 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,168 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,168 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,168 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,436 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,436 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,436 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,436 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,436 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,653 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,653 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,653 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,653 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,653 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,653 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,794 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,794 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,794 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,794 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,794 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,794 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,794 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:54,935 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,075 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,296 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,515 - INFO - dcom_da/DA_CLIENT._GetTreeItemByBranches - Получение дерева с сервера и запись .json формате
+2022-04-04 11:33:55,544 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 11:36:21,903 - INFO - Converter/run - запуск конвертора
+2022-04-04 11:36:25,337 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 11:36:25,338 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 11:36:25,389 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:36:25,389 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:36:26,516 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 11:36:26,517 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:36:26,517 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:36:28,140 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 11:37:53,016 - INFO - Converter/run - запуск конвертора
+2022-04-04 11:39:07,942 - INFO - Converter/run - запуск конвертора
+2022-04-04 11:39:11,674 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 11:39:11,674 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 11:39:11,755 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:39:11,755 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:39:12,964 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 11:39:12,965 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:39:12,965 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:39:14,592 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 11:39:32,831 - INFO - Converter/run - запуск конвертора
+2022-04-04 11:39:36,233 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 11:39:36,234 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 11:39:36,282 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:39:36,282 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 11:39:37,357 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 11:39:37,358 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:39:37,358 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 11:39:38,983 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 12:11:53,036 - INFO - Converter/run - запуск конвертора
+2022-04-04 12:11:56,659 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 12:11:56,660 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 12:11:56,775 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:11:56,775 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:11:58,017 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 12:11:58,018 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:11:58,018 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:11:59,706 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 12:18:36,243 - INFO - Converter/run - запуск конвертора
+2022-04-04 12:18:39,679 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 12:18:39,680 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 12:18:39,798 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:18:39,798 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:18:40,899 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 12:18:40,900 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:18:40,900 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:18:42,530 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 12:25:25,056 - INFO - Converter/run - запуск конвертора
+2022-04-04 12:25:28,661 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 12:25:28,662 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 12:25:28,718 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:25:28,718 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:25:29,813 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 12:25:29,813 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:25:29,813 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:25:31,435 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 12:58:02,685 - INFO - Converter/run - запуск конвертора
+2022-04-04 12:58:06,119 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 12:58:06,120 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 12:58:06,173 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:58:06,173 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:58:07,281 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 12:58:07,281 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:58:07,281 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:58:08,904 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 12:58:32,639 - INFO - Converter/run - запуск конвертора
+2022-04-04 12:58:36,035 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 12:58:36,035 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 12:58:36,084 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:58:36,084 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 12:58:37,169 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 12:58:37,169 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:58:37,169 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 12:58:38,795 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:01:18,866 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:01:22,320 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:01:22,320 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:01:22,369 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:01:22,369 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:01:23,752 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "SERVER"
+2022-04-04 13:01:23,753 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 13:01:23,753 - INFO - dcom_da/DA_CLIENT.GetTree - Создание DA_TREE.json и запись в него дерева
+2022-04-04 13:01:25,395 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:01:25,399 - ERROR - UA_SERVER - Ошибка: Возможно работает еще один конвертор
+2022-04-04 13:01:25,399 - ERROR - UA_SERVER - Ошибка: Возможно работает еще один конвертор
+2022-04-04 13:04:27,946 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:04:31,467 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:04:31,467 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:04:31,534 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:04:31,534 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:04:32,635 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:04:32,700 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:04:32,700 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:04:32,702 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:04:32,706 - ERROR - UA_SERVER - Ошибка: Возможно работает еще один конвертор
+2022-04-04 13:04:32,706 - ERROR - UA_SERVER - Ошибка: Возможно работает еще один конвертор
+2022-04-04 13:05:54,292 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:05:57,784 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:05:57,785 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:05:57,838 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:05:57,838 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:05:58,997 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:05:58,999 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:05:58,999 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:05:59,000 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:08:59,441 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:09:03,083 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:09:03,084 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:09:03,176 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:09:03,176 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:09:08,321 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:09:08,326 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:09:08,326 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:09:08,328 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:09:37,355 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:09:41,491 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:09:41,492 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:09:41,546 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:09:41,546 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:09:46,515 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:09:59,576 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:09:59,576 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:10:04,553 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:10:16,284 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:10:19,956 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:10:19,956 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:10:20,022 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:10:20,022 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:10:25,049 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:12:16,517 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:12:20,241 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:12:20,242 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:12:20,292 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:12:20,292 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:12:25,382 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:13:53,523 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:13:57,276 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:13:57,277 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:13:57,326 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:13:57,326 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:14:02,165 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:16:04,892 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:16:08,452 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:16:08,452 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:16:08,525 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:16:08,525 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:16:09,648 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:16:09,650 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:16:09,650 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:16:09,652 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:20:37,241 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:20:40,702 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:20:40,703 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:20:40,754 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:20:40,754 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:20:41,877 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:20:41,879 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:20:41,879 - ERROR - dcom_da/DA_CLIENT.GetTree - Ошибка: В получении дерева тэгов
+2022-04-04 13:20:41,881 - INFO - UA_SERVER - Запуск UA SERVER
+2022-04-04 13:27:42,117 - INFO - Converter/run - запуск конвертора
+2022-04-04 13:27:45,596 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server...
+2022-04-04 13:27:45,597 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-04 13:27:45,649 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:27:45,649 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server!
+2022-04-04 13:27:46,758 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-04 13:27:48,111 - INFO - UA_SERVER - Запуск UA SERVER
