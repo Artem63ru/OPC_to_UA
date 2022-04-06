@@ -1,8 +1,10 @@
 import converter
 from tkinter import *
 import sys
-from dcom_da.DA_CLIENT import DA_CLIENT
+import Service
 
+
+Service.init()
 converter.run()
 
 root = Tk()
