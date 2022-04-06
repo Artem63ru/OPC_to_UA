@@ -1,5 +1,8 @@
 import logging
 from logging import FileHandler
+from tempfile import mkstemp
+from os import close
+from shutil import move
 
 
 class LOGS:
@@ -28,6 +31,15 @@ class LOGS:
             self.fh.setFormatter(self.format_message)
             self.logger.addHandler(self.fh)
             self.logger.error(self.message)
+        self.remove_dubl()
 
-    def print_message(self):
-        print(self.logger.info(self.message))
+    def remove_dubl(self):
+        ft, temp = mkstemp()  # создать temp-файл
+        lines = []  # уникальные строки из file
+        with open(temp, 'w', encoding="Windows-1251") as t, open('log_file.log') as f:
+            for line in f:  # читать file построчно
+                if line not in lines:  # для line, отсутствующих в lines
+                    lines.append(line)  # сохранить line в lines
+                    t.write(line)  # записать line в temp-файл
+        close(ft)  # закрыть temp-файл
+        move(temp, 'log_file.log')  # переместить/переименовать temp-файл в file

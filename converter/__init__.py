@@ -3,6 +3,14 @@ import sys
 import argparse
 import xml.etree.ElementTree as ET
 from log.LOGS import LOGS
+import sched, time
+
+s = sched.scheduler(time.time, time.sleep)
+
+
+def restart_connection(object_cl):
+    s.enter(5, 1, restart_connection)
+    print(object_cl.CheckConnected())
 
 
 def get_config(configFile='cfg.xml'):
@@ -16,7 +24,7 @@ def get_config(configFile='cfg.xml'):
 
 
 def run():
-    LOGS('Converter/run', 'запуск конвертора', 'INFO')
+    LOGS('Converter/run', 'Запуск конвертора', 'INFO')
     _old_excepthook = sys.excepthook
 
     def end_program():
@@ -48,12 +56,14 @@ def run():
         da_client = DA_CLIENT(host=config['DA_HOST'], server_name=config['DA_NAME'], file=config['FILENAME'],
                               sheet=config['SHEET'], MonitorHandler=UpdateEventHandler,
                               UpdateRate=config['UPDATE_RATE'], mode=config['MODE'])
+
         da_client.Connect()
 
+        # print(da_client.CheckConnected())
         ua_serv = UA_SERVER(config['UA_HOST'], config['UA_SERVER_NAME'], config['UA_ROOT_NAMESPACE'])
         ua_serv.create_tree(da_client.GetTree())
         ua_serv.start()
-
+        da_client.s.run()
         def handleInit(handle):
             handle.set_lists(dalist=da_client.monitorItemsID, ualist=ua_serv.MonitorList)
 
@@ -96,4 +106,3 @@ def run():
         regsvr()
         LOGS('main_reg', 'Выход из программы', 'INFO')
         sys.exit()
-

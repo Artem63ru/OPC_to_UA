@@ -1,3 +1,4 @@
+import sched, time
 from win32com.client import gencache
 # from .regsvr import get_clsid
 # from regsvr import get_clsid
@@ -9,7 +10,7 @@ import xlrd
 import xlwt
 import pickle
 import win32com
-
+import time
 import dcom_da.regsvr
 
 value_types = ['str', 'int', 'bool', 'float']
@@ -25,9 +26,9 @@ class DA_CLIENT:
         self._monitorEventHandler = MonitorHandler
         self.monitorItemsID = []
         self._serverHandles = []
-
+        self.restart_connection = False
         self._isPingSuccess = False
-
+        self.log_restart_connection = 0
         self.host = host
         self.server_name = server_name
         self.isConnected = False
@@ -36,6 +37,7 @@ class DA_CLIENT:
         self.UpdateRate = UpdateRate
         self.Tree = None
         self.Mode = mode
+        self.s = sched.scheduler(time.time, time.sleep)
 
     def GetTree(self):
         if self.Tree is not None:
@@ -357,36 +359,61 @@ class DA_CLIENT:
             print('CheckConnected error::', err)
             self._isPingSuccess = False
             self._server = None
-
+            a = [err]
+            if err in a:
+                result = False
         return result
 
+    def restart_connection(self):
+        # self.s.enter(5, 1, self.restart_connection)
+        print(self.CheckConnected())
+
     def Connect(self):
-        war_message = False
-        while True:
+        self.s.enter(20, 1, self.Connect)
+
+
+        if not self.isConnected:
+            attempt = 0
+            while True:
+                try:
+                    self.CheckConnected()
+                    if attempt == 1:
+                        LOGS('dcom_da/DA_CLIENT.Connect',
+                             'Внимание: Проверьте работает ли DA server DA_HOST: {}'.format(self.host), 'WARNING')
+                    LOGS('dcom_da/DA_CLIENT.Connect', 'Попытка подключения к DA server... DA_HOST:{}'.format(self.host),
+                         'INFO')
+                    if (self._isPingSuccess and self.isConnected == False):
+                        dll = win32com.client.gencache.EnsureModule(dcom_da.regsvr.get_clsid(), 0, 1, 0)
+                        self._server = dll.OPCServer()
+                        self._server.Connect(self.server_name, self.host)
+                        LOGS('dcom_da/DA_CLIENT.Connect',
+                             'Успех: Подключено к  DA server! DA_HOST: {}'.format(self.host), 'INFO')
+                        print('Successfully connected to DA Server on the host: {}'.format(self.host))
+
+                        self._opcGroupM = win32com.client.Dispatch(self._server.OPCGroups.Add('MonitorGroup'))
+
+                        self.isConnected = True
+
+                    break
+                except Exception as err:
+                    self._server = None
+                    LOGS('dcom_da/DA_CLIENT.Connect', 'Ошибка: Не может подключиться к DA_HOST: {}'.format(self.host),
+                         'ERROR')
+                    print('Failed connect to DA server. Check the settings (server name, host or access rights)\n',
+                          err)
+                    attempt += 1
+                time.sleep(5)
+        else:
             try:
-
-                self.CheckConnected()
-                if not (war_message and self.isConnected):
-                    LOGS('dcom_da/DA_CLIENT.Connect', 'Внимание: Проверьте работает ли DA server', 'WARNING')
-                    war_message = True
-                LOGS('dcom_da/DA_CLIENT.Connect', 'Попытка подключения к DA server...', 'INFO')
-                if (self._isPingSuccess and self.isConnected == False):
-                    dll = win32com.client.gencache.EnsureModule(dcom_da.regsvr.get_clsid(), 0, 1, 0)
-                    self._server = dll.OPCServer()
-                    self._server.Connect(self.server_name, self.host)
-                    LOGS('dcom_da/DA_CLIENT.Connect', 'Успех: Подключено к  DA server!', 'INFO')
-                    print('Successfully connected to DA Server on the host {}'.format(self.host))
-
-                    self._opcGroupM = win32com.client.Dispatch(self._server.OPCGroups.Add('MonitorGroup'))
-
-                    self.isConnected = True
-
-                break
+                self._server.Connect(self.server_name, self.host)
+                if (self.restart_connection == True) and (self.log_restart_connection < 1):
+                    self.log_restart_connection += 1
+                    LOGS('dcom_da/DA_CLIENT.Connect', 'Сервер работает', 'INFO')
             except Exception as err:
-                self._server = None
-                LOGS('dcom_da/DA_CLIENT.Connect', 'Ошибка: Не может подключиться к DA server', 'ERROR')
-                print('Failed connect to DA server. Check the settings (server name, host or access rights)\n',
-                      err)
+                LOGS('dcom_da/DA_CLIENT.Connect', 'Ошибка: Отключено от DA SERVER, DA_HOST: {}'.format(self.host),
+                     'ERROR')
+                self.restart_connection = True
+                print('Сервер отключен')
 
     def Disconnect(self):
         try:
