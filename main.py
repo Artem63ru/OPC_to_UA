@@ -1,9 +1,9 @@
 import converter
 from tkinter import *
 import sys
+from dcom_da.DA_CLIENT import DA_CLIENT
 
 converter.run()
-
 
 root = Tk()
 

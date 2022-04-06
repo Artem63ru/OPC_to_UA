@@ -59,13 +59,15 @@ class UA_SERVER:
         return True
 
     def stop(self):
-        LOGS('UA_SERVER', 'Остановка UA SERVER', 'INFO')
+        LOGS('UA_SERVER', 'Остановка UA SERVER! UA_HOST: {}'.format(self.endpoint), 'INFO')
         self.server.stop()
 
     def start(self):
-        LOGS('UA_SERVER', 'Запуск UA SERVER', 'INFO')
+
+        LOGS('UA_SERVER', 'Запуск UA SERVER! UA_HOST: {}'.format(self.endpoint), 'INFO')
         try:
             self.server.start()
+            # print(self.server.get_namespace_array())
         except OSError:
             LOGS('UA_SERVER', 'Ошибка: Возможно работает еще один конвертор', 'ERROR')
             sys.exit()
