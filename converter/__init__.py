@@ -11,42 +11,42 @@ import servicemanager
 s = sched.scheduler(time.time, time.sleep)
 
 
-class MyService:
-    _svc_name_ = 'MyService'
-    _svc_display_name_ = 'My Service display name'
-
-    def __init__(self):
-        self.a = 0
-        self.tim = time.localtime()
-        self.running = None
-
-    def stop_service(self):
-        """Stop the service"""
-        self.running = False
-
-    def run_service(self):
-        """Main service loop. This is where work is done!"""
-        self.running = True
-        self.tim = time.localtime()
-        print('start сервиса', time.strftime("%H:%M:%S", self.tim))
-        run()
-
-
-class MyServiceFramework(win32serviceutil.ServiceFramework):
-    _svc_name_ = 'MyService'
-    _svc_display_name_ = 'My Service display name'
-
-    def SvcDoRun(self):
-        self.service_impl = MyService()
-        self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
-        self.ReportServiceStatus(win32service.SERVICE_RUNNING)
-        self.service_impl.run_service()
-
-    def SvcStop(self):
-        """Stop the service"""
-        self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
-        self.service_impl.stop_service()
-        self.ReportServiceStatus(win32service.SERVICE_STOPPED)
+# class MyService:
+#     _svc_name_ = 'MyService'
+#     _svc_display_name_ = 'My Service display name'
+#
+#     def __init__(self):
+#         self.a = 0
+#         self.tim = time.localtime()
+#         self.running = None
+#
+#     def stop_service(self):
+#         """Stop the service"""
+#         self.running = False
+#
+#     def run_service(self):
+#         """Main service loop. This is where work is done!"""
+#         self.running = True
+#         self.tim = time.localtime()
+#         print('start сервиса', time.strftime("%H:%M:%S", self.tim))
+#         run()
+#
+#
+# class MyServiceFramework(win32serviceutil.ServiceFramework):
+#     _svc_name_ = 'MyService'
+#     _svc_display_name_ = 'My Service display name'
+#
+#     def SvcDoRun(self):
+#         self.service_impl = MyService()
+#         self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
+#         self.ReportServiceStatus(win32service.SERVICE_RUNNING)
+#         self.service_impl.run_service()
+#
+#     def SvcStop(self):
+#         """Stop the service"""
+#         self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
+#         self.service_impl.stop_service()
+#         self.ReportServiceStatus(win32service.SERVICE_STOPPED)
 
 
 def restart_connection(object_cl):

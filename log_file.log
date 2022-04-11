@@ -98,3 +98,15 @@
 2022-04-08 15:38:13,374 - INFO - Converter/run - Запуск конвертора
 2022-04-08 15:38:31,492 - INFO - Converter/run - Запуск конвертора
 2022-04-08 15:38:57,097 - INFO - Converter/run - Запуск конвертора
+2022-04-11 13:00:28,039 - INFO - Converter/run - Запуск конвертора
+2022-04-11 13:00:31,679 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-11 13:00:31,693 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-11 13:00:32,008 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-11 13:00:33,242 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-11 13:00:34,587 - INFO - UA_SERVER - Запуск UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851
+2022-04-11 13:01:22,811 - INFO - Converter/run - Запуск конвертора
+2022-04-11 13:01:26,234 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-11 13:01:26,249 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-11 13:01:26,325 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-11 13:01:27,446 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-11 13:01:28,761 - INFO - UA_SERVER - Запуск UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851
