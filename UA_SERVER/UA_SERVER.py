@@ -70,5 +70,5 @@ class UA_SERVER:
             # print(self.server.get_namespace_array())
         except OSError as err:
             print('Error: ', err)
-            LOGS('UA_SERVER', 'Ошибка: Возможно работает еще один конвертор лиюо проблема с портом', 'ERROR')
+            LOGS('UA_SERVER', 'Ошибка: Возможно работает еще один конвертор, либо проблема с портом', 'ERROR')
             sys.exit()
