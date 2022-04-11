@@ -21,11 +21,18 @@ def regsvr():
         print('Successfull write lib to: ', shutil.copy(src, dist))
         os.system("regsvr32 /s OPCDAAuto.dll")
         LOGS('dcom_da/regsvr', 'Успех: OPCDAAuto.dll записался в System32', 'INFO')
-        reg_clsid = makepy.ShowInfo(r'OPCDAAuto.dll')
-        if len(reg_clsid) != 0:
+        infos = makepy.GetTypeLibsForSpec(r'OPCDAAuto.dll')
+        for (tlb, tlbSpec) in infos:
+            desc = tlbSpec.desc
+            if desc is None:
+                if tlb is None:
+                    desc = "<Could not load typelib %s>" % (tlbSpec.dll)
+                else:
+                    desc = tlb.GetDocumentation(-1)[0]
+        if len(tlbSpec.clsid) != 0:
 
             with open('DLL_CLSID', 'wb') as file:
-                pickle.dump(reg_clsid[0], file)
+                pickle.dump(tlbSpec.clsid, file)
 
             LOGS('dcom_da/regsvr', 'Успех: Получилось зарегистрировать библиотеку', 'INFO')
             print('Successfull lib registration')
@@ -33,7 +40,7 @@ def regsvr():
             print('Lib registration error')
             LOGS('dcom_da/regsvr', 'Ошибка: Не получилось зарегистрировать библиотеку', 'ERROR')
 
-        return reg_clsid[0]
+        return tlbSpec.clsid
     except Exception as err:
         print('Error: ', err)
         LOGS('dcom_da/regsvr', 'Ошибка: Проверьте права пользователя для регистрации', 'ERROR')

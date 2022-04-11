@@ -4,8 +4,49 @@ import argparse
 import xml.etree.ElementTree as ET
 from log.LOGS import LOGS
 import sched, time
+import win32serviceutil
+import win32service
+import servicemanager
 
 s = sched.scheduler(time.time, time.sleep)
+
+
+class MyService:
+    _svc_name_ = 'MyService'
+    _svc_display_name_ = 'My Service display name'
+
+    def __init__(self):
+        self.a = 0
+        self.tim = time.localtime()
+        self.running = None
+
+    def stop_service(self):
+        """Stop the service"""
+        self.running = False
+
+    def run_service(self):
+        """Main service loop. This is where work is done!"""
+        self.running = True
+        self.tim = time.localtime()
+        print('start сервиса', time.strftime("%H:%M:%S", self.tim))
+        run()
+
+
+class MyServiceFramework(win32serviceutil.ServiceFramework):
+    _svc_name_ = 'MyService'
+    _svc_display_name_ = 'My Service display name'
+
+    def SvcDoRun(self):
+        self.service_impl = MyService()
+        self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
+        self.ReportServiceStatus(win32service.SERVICE_RUNNING)
+        self.service_impl.run_service()
+
+    def SvcStop(self):
+        """Stop the service"""
+        self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
+        self.service_impl.stop_service()
+        self.ReportServiceStatus(win32service.SERVICE_STOPPED)
 
 
 def restart_connection(object_cl):
@@ -44,7 +85,7 @@ def run():
     parser.add_argument("--dh", default='localhost', help="DA SERVER HOST")
     parser.add_argument("--dn", default='Matrikon.OPC.Simulation.1', help="DA SERVER NAME")
     parser.add_argument("--cfg", default='cfg.xml', help="Path of config file")
-
+    parser.add_argument("--startup", default='install', help="Service")
     args = parser.parse_args()
 
     if args.m == 'config':
@@ -64,6 +105,7 @@ def run():
         ua_serv.create_tree(da_client.GetTree())
         ua_serv.start()
         da_client.s.run()
+
         def handleInit(handle):
             handle.set_lists(dalist=da_client.monitorItemsID, ualist=ua_serv.MonitorList)
 
@@ -100,9 +142,17 @@ def run():
         LOGS('main_savetree', 'Выход из программы', 'INFO')
         sys.exit()
 
-
     elif args.m == 'reg':
         from dcom_da.regsvr import regsvr
         regsvr()
         LOGS('main_reg', 'Выход из программы', 'INFO')
         sys.exit()
+
+    elif args.m == 'install':
+        print('ghjklsddddddddddddddddddddddddddd')
+        if len(sys.argv) == 1:
+            servicemanager.Initialize()
+            servicemanager.PrepareToHostSingle(MyService)
+            servicemanager.StartServiceCtrlDispatcher()
+        else:
+            win32serviceutil.HandleCommandLine(MyService, argv=['--startup=auto', 'install'])

@@ -7,3 +7,94 @@
 2022-04-06 13:36:47,027 - ERROR - dcom_da/DA_CLIENT.Connect - Ошибка: Отключено от DA SERVER, DA_HOST: localhost
 2022-04-06 13:37:07,046 - INFO - dcom_da/DA_CLIENT.Connect - Сервер работает
 2022-04-06 13:37:27,092 - INFO - dcom_da/DA_CLIENT.Connect - Сервер работает
+2022-04-06 16:32:37,156 - INFO - Converter/run - Запуск конвертора
+2022-04-06 16:32:40,962 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-06 16:32:40,988 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-06 16:32:41,631 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-06 16:32:42,791 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-06 16:32:44,147 - INFO - UA_SERVER - Запуск UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851
+2022-04-08 10:16:52,373 - INFO - Converter/run - Запуск конвертора
+2022-04-08 10:16:55,932 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-08 10:16:55,975 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-08 10:16:56,044 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-08 10:16:57,346 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-08 10:16:58,661 - INFO - UA_SERVER - Запуск UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851
+2022-04-08 10:17:17,129 - INFO - Converter/run - Запуск конвертора
+2022-04-08 10:17:20,598 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-08 10:17:20,608 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-08 10:17:20,668 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-08 10:17:21,840 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-08 10:17:23,117 - INFO - UA_SERVER - Запуск UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851
+2022-04-08 10:21:37,092 - INFO - Converter/run - Запуск конвертора
+2022-04-08 10:21:40,490 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-08 10:21:40,499 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-08 10:21:40,589 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-08 11:18:06,819 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:10:31,053 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:10:31,175 - INFO - dcom_da/regsvr - Попытка записи OPCDAAuto.dll в SysWOW64
+2022-04-08 12:10:31,191 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в SysWOW64
+2022-04-08 12:10:31,212 - INFO - dcom_da - Попытка записи OPCDAAuto.dll в System32
+2022-04-08 12:10:31,355 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в System32
+2022-04-08 12:14:54,939 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:14:55,072 - INFO - dcom_da/regsvr - Попытка записи OPCDAAuto.dll в SysWOW64
+2022-04-08 12:14:55,081 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в SysWOW64
+2022-04-08 12:14:55,096 - INFO - dcom_da - Попытка записи OPCDAAuto.dll в System32
+2022-04-08 12:14:55,378 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в System32
+2022-04-08 12:15:47,454 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:15:47,570 - INFO - dcom_da/regsvr - Попытка записи OPCDAAuto.dll в SysWOW64
+2022-04-08 12:15:47,582 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в SysWOW64
+2022-04-08 12:15:47,607 - INFO - dcom_da - Попытка записи OPCDAAuto.dll в System32
+2022-04-08 12:15:47,691 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в System32
+2022-04-08 12:16:04,398 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:16:04,543 - INFO - dcom_da/regsvr - Попытка записи OPCDAAuto.dll в SysWOW64
+2022-04-08 12:16:04,557 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в SysWOW64
+2022-04-08 12:16:04,571 - INFO - dcom_da - Попытка записи OPCDAAuto.dll в System32
+2022-04-08 12:16:04,666 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в System32
+2022-04-08 12:16:39,993 - ERROR - dcom_da/regsvr - Ошибка: Проверьте права пользователя для регистрации
+2022-04-08 12:18:26,971 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:18:27,082 - INFO - dcom_da/regsvr - Попытка записи OPCDAAuto.dll в SysWOW64
+2022-04-08 12:18:27,094 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в SysWOW64
+2022-04-08 12:18:27,113 - INFO - dcom_da - Попытка записи OPCDAAuto.dll в System32
+2022-04-08 12:18:27,229 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в System32
+2022-04-08 12:18:27,247 - INFO - dcom_da/regsvr - Успех: Получилось зарегистрировать библиотеку
+2022-04-08 12:18:27,263 - ERROR - dcom_da/regsvr - Ошибка: Проверьте права пользователя для регистрации
+2022-04-08 12:18:27,278 - INFO - main_reg - Выход из программы
+2022-04-08 12:18:49,875 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:18:49,999 - INFO - dcom_da/regsvr - Попытка записи OPCDAAuto.dll в SysWOW64
+2022-04-08 12:18:50,010 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в SysWOW64
+2022-04-08 12:18:50,028 - INFO - dcom_da - Попытка записи OPCDAAuto.dll в System32
+2022-04-08 12:18:50,165 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в System32
+2022-04-08 12:18:50,180 - INFO - dcom_da/regsvr - Успех: Получилось зарегистрировать библиотеку
+2022-04-08 12:18:50,192 - INFO - main_reg - Выход из программы
+2022-04-08 12:19:58,879 - INFO - Converter/run - Запуск конвертора
+2022-04-08 12:19:59,014 - INFO - dcom_da/regsvr - Попытка записи OPCDAAuto.dll в SysWOW64
+2022-04-08 12:19:59,028 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в SysWOW64
+2022-04-08 12:19:59,052 - INFO - dcom_da - Попытка записи OPCDAAuto.dll в System32
+2022-04-08 12:19:59,175 - INFO - dcom_da/regsvr - Успех: OPCDAAuto.dll записался в System32
+2022-04-08 12:19:59,193 - INFO - dcom_da/regsvr - Успех: Получилось зарегистрировать библиотеку
+2022-04-08 12:19:59,209 - INFO - main_reg - Выход из программы
+2022-04-08 14:49:37,204 - INFO - Converter/run - Запуск конвертора
+2022-04-08 14:52:34,814 - INFO - Converter/run - Запуск конвертора
+2022-04-08 14:52:48,641 - INFO - Converter/run - Запуск конвертора
+2022-04-08 14:52:52,208 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-08 14:52:52,222 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-08 14:52:52,309 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-08 14:52:53,562 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-08 14:53:02,885 - INFO - Converter/run - Запуск конвертора
+2022-04-08 14:55:02,410 - INFO - Converter/run - Запуск конвертора
+2022-04-08 14:59:45,306 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:02:01,599 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:07:29,472 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:07:51,606 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:08:35,074 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:08:51,337 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:13:06,686 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:14:02,490 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:15:19,873 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:16:29,357 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:21:07,319 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:27:23,918 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:28:17,411 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:38:13,374 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:38:31,492 - INFO - Converter/run - Запуск конвертора
+2022-04-08 15:38:57,097 - INFO - Converter/run - Запуск конвертора
