@@ -1,11 +1,7 @@
 import converter
 from tkinter import *
 import sys
-import Service.Service_convertor
-import win32serviceutil
-import win32service
-import win32event
-import servicemanager
+
 from multiprocessing import Process
 
 

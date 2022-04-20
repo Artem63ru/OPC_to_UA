@@ -4,13 +4,13 @@ import argparse
 import xml.etree.ElementTree as ET
 from log.LOGS import LOGS
 import sched, time
-import win32serviceutil
-import win32service
-import servicemanager
+# import win32serviceutil
+# import win32service
+# import servicemanager
 
 s = sched.scheduler(time.time, time.sleep)
 
-
+#
 # class MyService:
 #     _svc_name_ = 'MyService'
 #     _svc_display_name_ = 'My Service display name'
@@ -47,7 +47,7 @@ s = sched.scheduler(time.time, time.sleep)
 #         self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
 #         self.service_impl.stop_service()
 #         self.ReportServiceStatus(win32service.SERVICE_STOPPED)
-
+#
 
 def restart_connection(object_cl):
     s.enter(5, 1, restart_connection)
@@ -65,7 +65,7 @@ def get_config(configFile='cfg.xml'):
 
 
 def run():
-    LOGS('Converter/run', 'Запуск конвертора', 'INFO')
+    LOGS('Converter/run', 'Run Convertor ', 'INFO')
     _old_excepthook = sys.excepthook
 
     def end_program():
@@ -85,7 +85,7 @@ def run():
     parser.add_argument("--dh", default='localhost', help="DA SERVER HOST")
     parser.add_argument("--dn", default='Matrikon.OPC.Simulation.1', help="DA SERVER NAME")
     parser.add_argument("--cfg", default='cfg.xml', help="Path of config file")
-    parser.add_argument("--startup", default='install', help="Service")
+
     args = parser.parse_args()
 
     if args.m == 'config':
@@ -117,7 +117,7 @@ def run():
     elif args.m == 'servlist':
         from dcom_da.regsvr import get_serv_list
         get_serv_list()
-        LOGS('main_servlist', 'Выход из программы', 'INFO')
+        LOGS('main_servlist', 'Exiting the program', 'INFO')
         sys.exit()
     elif args.m == 'savetags':
         from dcom_da.DA_CLIENT import DA_CLIENT
@@ -131,7 +131,7 @@ def run():
         da_client.GetTree()
         da_client.SaveMonitorItemList()
         da_client.Disconnect()
-        LOGS('main_savetags', 'Выход из программы', 'INFO')
+        LOGS('main_savetags', 'Exiting the program', 'INFO')
         sys.exit()
     elif args.m == 'savetree':
         from dcom_da.DA_CLIENT import DA_CLIENT
@@ -139,20 +139,15 @@ def run():
         da_client.Connect()
         da_client.GetTree()
         da_client.Disconnect()
-        LOGS('main_savetree', 'Выход из программы', 'INFO')
+        LOGS('main_savetree', 'Exiting the program', 'INFO')
         sys.exit()
 
     elif args.m == 'reg':
         from dcom_da.regsvr import regsvr
         regsvr()
-        LOGS('main_reg', 'Выход из программы', 'INFO')
+        LOGS('main_reg', 'Exiting the program', 'INFO')
         sys.exit()
 
-    elif args.m == 'install':
-        print('ghjklsddddddddddddddddddddddddddd')
-        if len(sys.argv) == 1:
-            servicemanager.Initialize()
-            servicemanager.PrepareToHostSingle(MyService)
-            servicemanager.StartServiceCtrlDispatcher()
-        else:
-            win32serviceutil.HandleCommandLine(MyService, argv=['--startup=auto', 'install'])
+    # elif args.m == 'install':
+    #     win32serviceutil.HandleCommandLine(MyService, argv=['--startup=auto', 'install'])
+    #     sys.exit()

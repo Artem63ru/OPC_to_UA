@@ -110,3 +110,28 @@
 2022-04-11 13:01:26,325 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
 2022-04-11 13:01:27,446 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
 2022-04-11 13:01:28,761 - INFO - UA_SERVER - Запуск UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851
+2022-04-11 16:10:38,471 - INFO - Converter/run - Запуск конвертора
+2022-04-11 16:11:00,535 - INFO - Converter/run - Запуск конвертора
+2022-04-11 16:11:09,029 - INFO - Converter/run - Запуск конвертора
+2022-04-11 16:11:15,420 - INFO - Converter/run - Запуск конвертора
+2022-04-11 16:12:59,071 - INFO - Converter/run - Запуск конвертора
+2022-04-11 16:14:33,873 - INFO - Converter/run - Запуск конвертора
+2022-04-18 15:47:31,064 - INFO - Converter/run - Запуск конвертора
+2022-04-18 15:47:54,352 - INFO - Converter/run - Запуск конвертора
+2022-04-18 16:10:15,224 - INFO - Converter/run - Запуск конвертора
+2022-04-18 16:11:23,250 - INFO - Converter/run - Запуск конвертора
+2022-04-18 16:18:35,283 - INFO - Converter/run - Запуск конвертора
+2022-04-18 16:35:38,107 - INFO - Converter/run - Запуск конвертора
+2022-04-18 16:39:06,197 - INFO - Converter/run - Запуск конвертора
+2022-04-18 17:19:49,896 - INFO - Converter/run - Запуск конвертора
+2022-04-20 08:51:27,683 - INFO - Converter/run - Запуск конвертора
+2022-04-20 09:06:10,380 - INFO - Converter/run - Запуск конвертора
+2022-04-20 09:39:42,405 - INFO - Converter/run - Запуск конвертора
+2022-04-20 09:41:18,980 - INFO - Converter/run - Запуск конвертора
+2022-04-20 09:41:30,383 - INFO - Converter/run - Запуск конвертора
+2022-04-20 10:02:02,445 - INFO - Converter/run - Запуск конвертора
+2022-04-20 10:02:06,250 - INFO - dcom_da/DA_CLIENT.Connect - Попытка подключения к DA server... DA_HOST:localhost
+2022-04-20 10:02:06,296 - INFO - dcom_da/regsvr.get_clsid - Успех: Получилось получить значения с DLL_CLSID
+2022-04-20 10:02:06,442 - INFO - dcom_da/DA_CLIENT.Connect - Успех: Подключено к  DA server! DA_HOST: localhost
+2022-04-20 10:02:08,027 - INFO - dcom_da/DA_CLIENT.GetTree - Попытка прочитать тэги в режиме "FILE"
+2022-04-20 10:02:09,372 - INFO - UA_SERVER - Запуск UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851

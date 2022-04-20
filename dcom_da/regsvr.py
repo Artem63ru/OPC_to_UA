@@ -11,16 +11,16 @@ def regsvr():
     try:
         src = 'OPCDAAuto.dll'
         if os.path.exists(r'C:/Windows/SysWOW64'):
-            LOGS('dcom_da/regsvr', 'Попытка записи OPCDAAuto.dll в SysWOW64', 'INFO')
+            LOGS('dcom_da/regsvr', 'Write attempt OPCDAAuto.dll in SysWOW64', 'INFO')
             dist = r"C:/Windows/SysWOW64/"
-            LOGS('dcom_da/regsvr', 'Успех: OPCDAAuto.dll записался в SysWOW64', 'INFO')
+            LOGS('dcom_da/regsvr', 'Success: OPCDAAuto.dll has written in SysWOW64', 'INFO')
             print('Successfull write lib to: ', shutil.copy(src, dist))
 
         dist = r"C:/Windows/System32/"
-        LOGS('dcom_da', 'Попытка записи OPCDAAuto.dll в System32', 'INFO')
+        LOGS('dcom_da', 'Write attempt OPCDAAuto.dll in System32', 'INFO')
         print('Successfull write lib to: ', shutil.copy(src, dist))
         os.system("regsvr32 /s OPCDAAuto.dll")
-        LOGS('dcom_da/regsvr', 'Успех: OPCDAAuto.dll записался в System32', 'INFO')
+        LOGS('dcom_da/regsvr', 'Success: OPCDAAuto.dll has written in System32', 'INFO')
         infos = makepy.GetTypeLibsForSpec(r'OPCDAAuto.dll')
         for (tlb, tlbSpec) in infos:
             desc = tlbSpec.desc
@@ -34,59 +34,59 @@ def regsvr():
             with open('DLL_CLSID', 'wb') as file:
                 pickle.dump(tlbSpec.clsid, file)
 
-            LOGS('dcom_da/regsvr', 'Успех: Получилось зарегистрировать библиотеку', 'INFO')
+            LOGS('dcom_da/regsvr', 'Success: Managed to register the library', 'INFO')
             print('Successfull lib registration')
         else:
             print('Lib registration error')
-            LOGS('dcom_da/regsvr', 'Ошибка: Не получилось зарегистрировать библиотеку', 'ERROR')
+            LOGS('dcom_da/regsvr', 'Error: Not managed to register the library', 'ERROR')
 
         return tlbSpec.clsid
     except Exception as err:
         print('Error: ', err)
-        LOGS('dcom_da/regsvr', 'Ошибка: Проверьте права пользователя для регистрации', 'ERROR')
+        LOGS('dcom_da/regsvr', 'Error: Check user permissions for registration', 'ERROR')
         return False
 
 def get_clsid():
     if os.path.exists('DLL_CLSID') != True:
-        LOGS('dcom_da/regsvr.get_clsid', 'Нет файла DLL_CLSID идет поиск решения', 'INFO')
+        LOGS('dcom_da/regsvr.get_clsid', 'No DLL_CLSID file is looking for a solution', 'INFO')
         clsid=regsvr()
 
         if clsid!=False:
-            LOGS('dcom_da/regsvr.get_clsid', 'Успех: Получилось создать и получить значения с DLL_CLSID', 'INFO')
+            LOGS('dcom_da/regsvr.get_clsid', 'Success: It was possible to create and get values from DLL_CLSID', 'INFO')
             return clsid
         else:
-            LOGS('dcom_da/regsvr.get_clsid', 'Ошибка: Не получилось создать DLL_CLSID', 'ERROR')
+            LOGS('dcom_da/regsvr.get_clsid', 'Error: Failed to create DLL_CLSID', 'ERROR')
             raise Exception('Failed to register library ')
 
     else:
         with  open('DLL_CLSID', 'rb') as file:
-            LOGS('dcom_da/regsvr.get_clsid', 'Успех: Получилось получить значения с DLL_CLSID', 'INFO')
+            LOGS('dcom_da/regsvr.get_clsid', 'Success: Get values from DLL_CLSID', 'INFO')
             return pickle.load(file)
 
 def get_serv_list():
     if os.path.exists('DLL_CLSID') != True:
-        LOGS('dcom_da/regsvr.get_serv_list', 'Нет файла DLL_CLSID идет поиск решения', 'INFO')
+        LOGS('dcom_da/regsvr.get_serv_list', 'No DLL_CLSID file is looking for a solution', 'INFO')
         clsid=regsvr()
         if clsid == False:
-            LOGS('dcom_da/regsvr.get_serv_list', 'Ошибка: не получилось создать DLL_CLSID', 'ERROR')
+            LOGS('dcom_da/regsvr.get_serv_list', 'Error: Failed to create DLL_CLSID', 'ERROR')
             raise Exception('Failed to register library ')
     else:
         with open('DLL_CLSID', 'rb') as file:
             clsid=pickle.load(file)
-            LOGS('dcom_da/regsvr.get_serv_list', 'Успех:получилось получить значения с DLL_CLSID', 'INFO')
+            LOGS('dcom_da/regsvr.get_serv_list', 'Success: succeeded in getting values from DLL_CLSID', 'INFO')
 
     dll = gencache.EnsureModule(clsid, 0, 1, 0)
     opcserver = dll.OPCServer()
-    LOGS('dcom_da/regsvr.get_serv_list', 'Получение списка серверов', 'INFO')
+    LOGS('dcom_da/regsvr.get_serv_list', 'Getting a list of servers', 'INFO')
     DAservers = opcserver.GetOPCServers()
 
     if len(DAservers) == 0:
         print('DA servers not found')
-        LOGS('dcom_da/regsvr.get_serv_list', 'Список серверов пуст', 'INFO')
+        LOGS('dcom_da/regsvr.get_serv_list', 'Server list is empty', 'INFO')
         sys.exit()
 
     i = 1
     for serv in DAservers:
-        LOGS('dcom_da/regsvr.get_serv_list', 'Вывод списка серверов', 'INFO')
+        LOGS('dcom_da/regsvr.get_serv_list', 'Server list output', 'INFO')
         print(str(i) + '. ' + serv)
         i += 1
