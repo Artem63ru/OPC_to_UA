@@ -62,7 +62,18 @@ def get_config(configFile='cfg.xml'):
         res[child.tag] = child.text
 
     return res
+def intro():
+    print('='*54)
+    # for i in range(8):
+    #     print('|',13*'\t','|')
+    #     if i == 3:
+    #         print('|', 4 * '\t' + '  Convertor, v.04.05 ' + str(4 * '\t'), '|')
+        # if i == 7:
+        #     print('|', 6 * '\t' + '  Gazpr', '|')
+    print(5 * '\t' + ' Gazprom Auto')
+    print( 4 * '\t' + '  Convertor, v.04.05 ' + str(4 * '\t'))
 
+    print('=' * 54)
 
 def run():
     LOGS('Converter/run', 'Run Convertor ', 'INFO')

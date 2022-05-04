@@ -5,7 +5,7 @@ import sys
 from multiprocessing import Process
 
 
-
+converter.intro()
 converter.run()
 root = Tk()
 
