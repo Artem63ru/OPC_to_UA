@@ -1,10 +1,12 @@
 import converter
 from tkinter import *
 import sys
-from dcom_da.DA_CLIENT import DA_CLIENT
+
+from multiprocessing import Process
+
+
 
 converter.run()
-
 root = Tk()
 
 # root.bind("<space>", lambda event: root.destroy())

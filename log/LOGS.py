@@ -13,20 +13,20 @@ class LOGS:
             '%(asctime)s - %(levelname)s - %(name)s - %(message)s')  # Задается формат записи лога
 
         if log_level == 'WARNING':
-            self.fh = logging.FileHandler('log_file.log', encoding="Windows-1251")
+            self.fh = logging.FileHandler('log_file.log')
             self.fh.setLevel(logging.WARNING)
             self.fh.setFormatter(self.format_message)
             self.logger.warning(self.message)
             self.logger.addHandler(self.fh)
 
         if log_level == 'INFO':
-            self.fh = logging.FileHandler('log_file.log', encoding="Windows-1251")
+            self.fh = logging.FileHandler('log_file.log')
             self.logger.setLevel(logging.INFO)
             self.fh.setFormatter(self.format_message)
             self.logger.addHandler(self.fh)
             self.logger.info(self.message)
         if log_level == 'ERROR':
-            self.fh = logging.FileHandler('log_file.log', encoding="Windows-1251")
+            self.fh = logging.FileHandler('log_file.log')
             self.logger.setLevel(logging.INFO)
             self.fh.setFormatter(self.format_message)
             self.logger.addHandler(self.fh)
@@ -36,7 +36,7 @@ class LOGS:
     def remove_dubl(self):
         ft, temp = mkstemp()  # создать temp-файл
         lines = []  # уникальные строки из file
-        with open(temp, 'w', encoding="Windows-1251") as t, open('log_file.log') as f:
+        with open(temp, 'w') as t, open('log_file.log') as f:
             for line in f:  # читать file построчно
                 if line not in lines:  # для line, отсутствующих в lines
                     lines.append(line)  # сохранить line в lines

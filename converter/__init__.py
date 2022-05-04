@@ -4,9 +4,50 @@ import argparse
 import xml.etree.ElementTree as ET
 from log.LOGS import LOGS
 import sched, time
+# import win32serviceutil
+# import win32service
+# import servicemanager
 
 s = sched.scheduler(time.time, time.sleep)
 
+#
+# class MyService:
+#     _svc_name_ = 'MyService'
+#     _svc_display_name_ = 'My Service display name'
+#
+#     def __init__(self):
+#         self.a = 0
+#         self.tim = time.localtime()
+#         self.running = None
+#
+#     def stop_service(self):
+#         """Stop the service"""
+#         self.running = False
+#
+#     def run_service(self):
+#         """Main service loop. This is where work is done!"""
+#         self.running = True
+#         self.tim = time.localtime()
+#         print('start сервиса', time.strftime("%H:%M:%S", self.tim))
+#         run()
+#
+#
+# class MyServiceFramework(win32serviceutil.ServiceFramework):
+#     _svc_name_ = 'MyService'
+#     _svc_display_name_ = 'My Service display name'
+#
+#     def SvcDoRun(self):
+#         self.service_impl = MyService()
+#         self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
+#         self.ReportServiceStatus(win32service.SERVICE_RUNNING)
+#         self.service_impl.run_service()
+#
+#     def SvcStop(self):
+#         """Stop the service"""
+#         self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
+#         self.service_impl.stop_service()
+#         self.ReportServiceStatus(win32service.SERVICE_STOPPED)
+#
 
 def restart_connection(object_cl):
     s.enter(5, 1, restart_connection)
@@ -24,7 +65,7 @@ def get_config(configFile='cfg.xml'):
 
 
 def run():
-    LOGS('Converter/run', 'Запуск конвертора', 'INFO')
+    LOGS('Converter/run', 'Run Convertor ', 'INFO')
     _old_excepthook = sys.excepthook
 
     def end_program():
@@ -64,6 +105,7 @@ def run():
         ua_serv.create_tree(da_client.GetTree())
         ua_serv.start()
         da_client.s.run()
+
         def handleInit(handle):
             handle.set_lists(dalist=da_client.monitorItemsID, ualist=ua_serv.MonitorList)
 
@@ -75,7 +117,7 @@ def run():
     elif args.m == 'servlist':
         from dcom_da.regsvr import get_serv_list
         get_serv_list()
-        LOGS('main_servlist', 'Выход из программы', 'INFO')
+        LOGS('main_servlist', 'Exiting the program', 'INFO')
         sys.exit()
     elif args.m == 'savetags':
         from dcom_da.DA_CLIENT import DA_CLIENT
@@ -89,7 +131,7 @@ def run():
         da_client.GetTree()
         da_client.SaveMonitorItemList()
         da_client.Disconnect()
-        LOGS('main_savetags', 'Выход из программы', 'INFO')
+        LOGS('main_savetags', 'Exiting the program', 'INFO')
         sys.exit()
     elif args.m == 'savetree':
         from dcom_da.DA_CLIENT import DA_CLIENT
@@ -97,12 +139,15 @@ def run():
         da_client.Connect()
         da_client.GetTree()
         da_client.Disconnect()
-        LOGS('main_savetree', 'Выход из программы', 'INFO')
+        LOGS('main_savetree', 'Exiting the program', 'INFO')
         sys.exit()
-
 
     elif args.m == 'reg':
         from dcom_da.regsvr import regsvr
         regsvr()
-        LOGS('main_reg', 'Выход из программы', 'INFO')
+        LOGS('main_reg', 'Exiting the program', 'INFO')
         sys.exit()
+
+    # elif args.m == 'install':
+    #     win32serviceutil.HandleCommandLine(MyService, argv=['--startup=auto', 'install'])
+    #     sys.exit()

@@ -170,6 +170,7 @@ bind Menu <<NextLine>> {
 }
 bind Menu <KeyPress> {
     tk::TraverseWithinMenu %W %A
+    break
 }
 
 # The following bindings apply to all windows, and are used to
@@ -248,7 +249,6 @@ proc ::tk::MbLeave w {
 proc ::tk::MbPost {w {x {}} {y {}}} {
     global errorInfo
     variable ::tk::Priv
-    global tcl_platform
 
     if {[$w cget -state] eq "disabled" || $w eq $Priv(postedMb)} {
 	return
@@ -313,6 +313,9 @@ proc ::tk::MbPost {w {x {}} {y {}}} {
 		set x [expr {[winfo rootx $w] - [winfo reqwidth $menu]}]
 		set y [expr {(2 * [winfo rooty $w] + [winfo height $w]) / 2}]
 		set entry [MenuFindName $menu [$w cget -text]]
+		if {$entry eq ""} {
+                    set entry 0
+		}
 		if {[$w cget -indicatoron]} {
 		    if {$entry == [$menu index last]} {
 			incr y [expr {-([$menu yposition $entry] \
@@ -333,6 +336,9 @@ proc ::tk::MbPost {w {x {}} {y {}}} {
 		set x [expr {[winfo rootx $w] + [winfo width $w]}]
 		set y [expr {(2 * [winfo rooty $w] + [winfo height $w]) / 2}]
 		set entry [MenuFindName $menu [$w cget -text]]
+		if {$entry eq ""} {
+                    set entry 0
+		}
 		if {[$w cget -indicatoron]} {
 		    if {$entry == [$menu index last]} {
 			incr y [expr {-([$menu yposition $entry] \
@@ -396,7 +402,6 @@ proc ::tk::MbPost {w {x {}} {y {}}} {
 #			is a posted menubutton.
 
 proc ::tk::MenuUnpost menu {
-    global tcl_platform
     variable ::tk::Priv
     set mb $Priv(postedMb)
 
@@ -525,7 +530,6 @@ proc ::tk::MbMotion {w upDown rootx rooty} {
 
 proc ::tk::MbButtonUp w {
     variable ::tk::Priv
-    global tcl_platform
 
     set menu [$w cget -menu]
     set tearoff [expr {[tk windowingsystem] eq "x11" || \
@@ -600,9 +604,14 @@ proc ::tk::MenuMotion {menu x y state} {
 
 proc ::tk::MenuButtonDown menu {
     variable ::tk::Priv
-    global tcl_platform
 
     if {![winfo viewable $menu]} {
+        return
+    }
+    if {[$menu index active] eq "none"} {
+        if {[$menu cget -type] ne "menubar" } {
+            set Priv(window) {}
+        }
         return
     }
     $menu postcascade active
@@ -1030,7 +1039,7 @@ proc ::tk::MenuFind {w char} {
 
 proc ::tk::TraverseToMenu {w char} {
     variable ::tk::Priv
-    if {$char eq ""} {
+    if {![winfo exists $w] || $char eq ""} {
 	return
     }
     while {[winfo class $w] eq "Menu"} {
@@ -1212,8 +1221,6 @@ proc ::tk::MenuFindName {menu s} {
 #			upper-left corner goes at (x,y).
 
 proc ::tk::PostOverPoint {menu x y {entry {}}}  {
-    global tcl_platform
-
     if {$entry ne ""} {
 	if {$entry == [$menu index last]} {
 	    incr y [expr {-([$menu yposition $entry] \
@@ -1228,8 +1235,8 @@ proc ::tk::PostOverPoint {menu x y {entry {}}}  {
     if {[tk windowingsystem] eq "win32"} {
 	# osVersion is not available in safe interps
 	set ver 5
-	if {[info exists tcl_platform(osVersion)]} {
-	    scan $tcl_platform(osVersion) %d ver
+	if {[info exists ::tcl_platform(osVersion)]} {
+	    scan $::tcl_platform(osVersion) %d ver
 	}
 
 	# We need to fix some problems with menu posting on Windows,
@@ -1334,7 +1341,6 @@ proc ::tk::GenerateMenuSelect {menu} {
 
 proc ::tk_popup {menu x y {entry {}}} {
     variable ::tk::Priv
-    global tcl_platform
     if {$Priv(popup) ne "" || $Priv(postedMb) ne ""} {
 	tk::MenuUnpost {}
     }
@@ -1343,6 +1349,7 @@ proc ::tk_popup {menu x y {entry {}}} {
         tk::SaveGrabInfo $menu
 	grab -global $menu
 	set Priv(popup) $menu
+	set Priv(window) $menu
 	set Priv(menuActivated) 1
 	tk_menuSetFocus $menu
     }

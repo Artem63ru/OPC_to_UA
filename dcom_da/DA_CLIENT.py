@@ -52,9 +52,9 @@ class DA_CLIENT:
 
                 if self._browser is not None:
                     if self.Mode == 'SERVER':
-                        LOGS('dcom_da/DA_CLIENT.GetTree', 'Попытка прочитать тэги в режиме "SERVER"', 'INFO')
+                        LOGS('dcom_da/DA_CLIENT.GetTree', 'Trying to read tags in mode "SERVER"', 'INFO')
                         if not os.path.exists('DA_TREE'):
-                            LOGS('dcom_da/DA_CLIENT.GetTree', 'Создание DA_TREE.json и запись в него дерева', 'INFO')
+                            LOGS('dcom_da/DA_CLIENT.GetTree', 'Create DA_TREE.json and writting tree', 'INFO')
                             self._browser.AccessRights = 0
                             self._opcGroupBuff = self._server.OPCGroups.Add('BufferGroup')
                             self.Tree = self._GetTreeItemByBranches()
@@ -62,16 +62,16 @@ class DA_CLIENT:
                             with open('DA_TREE.json', 'w', encoding='utf-8') as f:
                                 json.dump(obj=self.Tree, fp=f, indent=4, ensure_ascii=False, default=str)
                         else:
-                            LOGS('dcom_da/DA_CLIENT.GetTree', 'Загрузка дерева из DA_TREE.json', 'INFO')
+                            LOGS('dcom_da/DA_CLIENT.GetTree', 'Load tree from DA_TREE.json', 'INFO')
                             with open('DA_TREE.json', 'r') as file:
                                 self.Tree = json.load(file)
                     else:
-                        LOGS('dcom_da/DA_CLIENT.GetTree', 'Попытка прочитать тэги в режиме "FILE"', 'INFO')
+                        LOGS('dcom_da/DA_CLIENT.GetTree', 'Trying to read tags in mode "FILE"', 'INFO')
                         self.GetItemsFromFile()
 
 
         except Exception as err:
-            LOGS('dcom_da/DA_CLIENT.GetTree', 'Ошибка: В получении дерева тэгов', 'ERROR')
+            LOGS('dcom_da/DA_CLIENT.GetTree', 'ERROR: In getting the tag tree', 'ERROR')
             print('GetTree Error::', err)
 
         return self.Tree
@@ -273,7 +273,7 @@ class DA_CLIENT:
 
                 return True
         except Exception as err:
-            LOGS('dcom_da/DA_CLIENT.AddItemId', 'Ошибка: Добавления новых ItemId', 'ERROR')
+            LOGS('dcom_da/DA_CLIENT.AddItemId', 'Error: Adding new ItemId', 'ERROR')
             print('AddItemId Error::', err)
 
         return False
@@ -379,15 +379,15 @@ class DA_CLIENT:
                     self.CheckConnected()
                     if attempt == 1:
                         LOGS('dcom_da/DA_CLIENT.Connect',
-                             'Внимание: Проверьте работает ли DA server DA_HOST: {}'.format(self.host), 'WARNING')
-                    LOGS('dcom_da/DA_CLIENT.Connect', 'Попытка подключения к DA server... DA_HOST:{}'.format(self.host),
+                             'WARNING: Check if it works DA server DA_HOST: {}'.format(self.host), 'WARNING')
+                    LOGS('dcom_da/DA_CLIENT.Connect', 'Trying connect to DA server... DA_HOST:{}'.format(self.host),
                          'INFO')
                     if (self._isPingSuccess and self.isConnected == False):
                         dll = win32com.client.gencache.EnsureModule(dcom_da.regsvr.get_clsid(), 0, 1, 0)
                         self._server = dll.OPCServer()
                         self._server.Connect(self.server_name, self.host)
                         LOGS('dcom_da/DA_CLIENT.Connect',
-                             'Успех: Подключено к  DA server! DA_HOST: {}'.format(self.host), 'INFO')
+                             'Success: Connect to DA server! DA_HOST: {}'.format(self.host), 'INFO')
                         print('Successfully connected to DA Server on the host: {}'.format(self.host))
 
                         self._opcGroupM = win32com.client.Dispatch(self._server.OPCGroups.Add('MonitorGroup'))
@@ -397,7 +397,7 @@ class DA_CLIENT:
                     break
                 except Exception as err:
                     self._server = None
-                    LOGS('dcom_da/DA_CLIENT.Connect', 'Ошибка: Не может подключиться к DA_HOST: {}'.format(self.host),
+                    LOGS('dcom_da/DA_CLIENT.Connect', 'Error: Can not connect к DA_HOST: {}'.format(self.host),
                          'ERROR')
                     print('Failed connect to DA server. Check the settings (server name, host or access rights)\n',
                           err)
@@ -408,12 +408,12 @@ class DA_CLIENT:
                 self._server.Connect(self.server_name, self.host)
                 if (self.restart_connection == True) and (self.log_restart_connection < 1):
                     self.log_restart_connection += 1
-                    LOGS('dcom_da/DA_CLIENT.Connect', 'Сервер работает', 'INFO')
+                    LOGS('dcom_da/DA_CLIENT.Connect', 'Server is working', 'INFO')
             except Exception as err:
-                LOGS('dcom_da/DA_CLIENT.Connect', 'Ошибка: Отключено от DA SERVER, DA_HOST: {}'.format(self.host),
+                LOGS('dcom_da/DA_CLIENT.Connect', 'Error: Disconnected from DA SERVER, DA_HOST: {}'.format(self.host),
                      'ERROR')
                 self.restart_connection = True
-                print('Сервер отключен')
+                print('Server is down')
 
     def Disconnect(self):
         try:
