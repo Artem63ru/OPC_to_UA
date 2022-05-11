@@ -433,3 +433,15 @@
 2022-05-04 16:00:01,024 - INFO - dcom_da/regsvr.get_clsid - Success: Get values from DLL_CLSID
 2022-05-04 16:00:01,227 - INFO - dcom_da/DA_CLIENT.Connect - Success: Connect to DA server! DA_HOST: localhost
 2022-05-04 16:00:03,698 - INFO - dcom_da/DA_CLIENT.GetTree - Trying to read tags in mode "FILE"
+2022-05-04 16:15:37,152 - INFO - Converter/run - Run Convertor 
+2022-05-04 16:15:40,590 - INFO - dcom_da/DA_CLIENT.Connect - Trying connect to DA server... DA_HOST:localhost
+2022-05-04 16:15:40,599 - INFO - dcom_da/regsvr.get_clsid - Success: Get values from DLL_CLSID
+2022-05-04 16:15:40,702 - INFO - dcom_da/DA_CLIENT.Connect - Success: Connect to DA server! DA_HOST: localhost
+2022-05-04 16:15:43,025 - INFO - dcom_da/DA_CLIENT.GetTree - Trying to read tags in mode "FILE"
+2022-05-04 16:15:44,368 - INFO - UA_SERVER - Start UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851
+2022-05-04 16:18:43,430 - INFO - Converter/run - Run Convertor 
+2022-05-04 16:18:46,879 - INFO - dcom_da/DA_CLIENT.Connect - Trying connect to DA server... DA_HOST:localhost
+2022-05-04 16:18:46,888 - INFO - dcom_da/regsvr.get_clsid - Success: Get values from DLL_CLSID
+2022-05-04 16:18:46,992 - INFO - dcom_da/DA_CLIENT.Connect - Success: Connect to DA server! DA_HOST: localhost
+2022-05-04 16:18:49,324 - INFO - dcom_da/DA_CLIENT.GetTree - Trying to read tags in mode "FILE"
+2022-05-04 16:18:50,667 - INFO - UA_SERVER - Start UA SERVER! UA_HOST: opc.tcp://127.0.0.1:4851

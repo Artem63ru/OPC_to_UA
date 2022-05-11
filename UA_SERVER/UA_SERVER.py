@@ -64,7 +64,6 @@ class UA_SERVER:
         return self.MonitorList[value['Name']]
 
     def signal(self):
-        print(self.signal_point_value.get_value())
         if self.signal_point_value.get_value():
             self.signal_point_value.set_value(False)
         else:
