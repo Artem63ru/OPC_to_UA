@@ -2,23 +2,23 @@ import sys
 
 sys.path.insert(0, "..")
 from opcua import ua, Server
-# from opcua.server.user_manager import UserManager
+from opcua.server.user_manager import UserManager
 from opcua.ua import NodeIdType, NodeId
 from log.LOGS import LOGS
 from converter.UpdateEventHandle import get_ua_type
 from threading import Timer
 
 
-# ,\from opc_server_security import OPC_SERVER_SECURITY
-# users_db = {
-#     'user1': 'pw1',
-#     'user2': 'pw2'
-# }
-#
-#
-# def user_manager(isession, username, password):
-#     isession.user = UserManager.User
-#     return username in users_db and password == users_db[username]
+# from opc_server_security import OPC_SERVER_SECURITY
+users_db = {
+    'user1': 'pw1',
+    'user2': 'pw2'
+}
+
+
+def user_manager(isession, username, password):
+    isession.user = UserManager.User
+    return username in users_db and password == users_db[username]
 
 
 class UA_SERVER:
@@ -31,16 +31,20 @@ class UA_SERVER:
         self.server = Server()
         self.server.set_endpoint(endpoint)
         self.server.set_server_name(name)
-        # self.server.set_security_IDs(["Username"])
-        # self.server.user_manager.set_user_manager(user_manager)
-        self.nmspc = self.server.register_namespace(namespace)
 
+
+        self.server.set_security_IDs(["Username"])
+        self.server.user_manager.set_user_manager(user_manager)
+
+        self.nmspc = self.server.register_namespace(namespace)
         self.objects = self.server.get_objects_node()
 
-        self.signal_point = self.objects.add_object(self.nmspc, 'Signal')
-
         # print(self.server.get_namespace_index(namespace))
+
+        # Добавление мигающего бита (True/False) проверка раюоты сервера
+        self.signal_point = self.objects.add_object(self.nmspc, 'Signal')
         self.signal_point_value = self.signal_point.add_variable(self.nmspc, "Status", True)
+
         self.MonitorList = {}
 
     def add_folder(self, folder_name, folder=None):
