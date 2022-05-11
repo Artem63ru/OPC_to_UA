@@ -9,7 +9,6 @@ from converter.UpdateEventHandle import get_ua_type
 from threading import Timer
 
 
-# from opc_server_security import OPC_SERVER_SECURITY
 users_db = {
     'user1': 'pw1',
     'user2': 'pw2'
@@ -36,10 +35,12 @@ class UA_SERVER:
         self.server.set_security_IDs(["Username"])
         self.server.user_manager.set_user_manager(user_manager)
 
+
+
         self.nmspc = self.server.register_namespace(namespace)
         self.objects = self.server.get_objects_node()
 
-        # print(self.server.get_namespace_index(namespace))
+
 
         # Добавление мигающего бита (True/False) проверка раюоты сервера
         self.signal_point = self.objects.add_object(self.nmspc, 'Signal')
