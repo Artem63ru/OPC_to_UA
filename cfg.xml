@@ -7,6 +7,6 @@
     <UA_ROOT_NAMESPACE>root1</UA_ROOT_NAMESPACE>
     <UPDATE_RATE>500</UPDATE_RATE> <!--ms-->
     <MODE>FILE</MODE>
-    <FILENAME>MonitorItemTags.xls</FILENAME>
+    <FILENAME>test.xlsx</FILENAME>
     <SHEET>output_sheet</SHEET>
 </configuration>

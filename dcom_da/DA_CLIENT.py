@@ -3,12 +3,14 @@ from win32com.client import gencache
 # from .regsvr import get_clsid
 # from regsvr import get_clsid
 # from regsvr import get_serv_list
+import pathlib
 from log.LOGS import LOGS
 import os
 import json
 import xlrd
 import xlwt
 import pickle
+import openpyxl
 import win32com
 import time
 import dcom_da.regsvr
@@ -183,13 +185,23 @@ class DA_CLIENT:
         return False
 
     def GetItemsFromFile(self):
-        def read_sheet(sheet):
-            colidx = dict((sheet.cell(0, i).value, i) for i in range(sheet.ncols))
-            tags = [sheet.cell(i, colidx["instrumenttag"]).value for i in range(1, sheet.nrows)]
+        def read_sheet(sheet, file_fotmat='xls'):
+            if file_fotmat == 'xlsx':
+                ncols = sheet.max_column
+                nrow = sheet.max_row
+                colidx = dict((sheet.cell(row=1, column=i).value, i) for i in range(1, ncols + 1))
+                tags = [sheet.cell(row=i, column=colidx["instrumenttag"]).value for i in range(1, nrow + 1)]
+                tags = tags[1:]
+            else:
+                ncols = sheet.ncols
+                nrow = sheet.nrows
+                colidx = dict((sheet.cell(0, i).value, i) for i in range(ncols))
+                tags = [sheet.cell(i, colidx["instrumenttag"]).value for i in range(1, nrow)]
 
             size = len(tags)
 
             for tag in tags:
+
                 new_leaf = {'Name': tag,
                             'Type': 'value'}
                 try:
@@ -206,14 +218,22 @@ class DA_CLIENT:
 
                     # self.monitorItemsID.append(tag)
                 except Exception as err:
-                    print('Add item error::', err)
+                    print('Add item error:: cannot add a tag: [ {} ]  '.format(tag), err)
                     continue
                 self.Tree.append(new_leaf)
 
         self.Tree = []
-        wb = xlrd.open_workbook(self.inputFile)
-        sheet = wb.sheet_by_name(self.inputFileSheet)
-        read_sheet(sheet)
+
+        if pathlib.Path(self.inputFile).suffix == '.xls':
+            wb = xlrd.open_workbook(self.inputFile)
+            sheet = wb.sheet_by_name(self.inputFileSheet)
+            read_sheet(sheet, 'xls')
+
+        elif pathlib.Path(self.inputFile).suffix == '.xlsx':
+
+            wb = openpyxl.load_workbook(self.inputFile)
+            sheet = wb.active
+            read_sheet(sheet, 'xlsx')
 
     def StartMonitor(self, handlerInit):
         try:
@@ -274,7 +294,6 @@ class DA_CLIENT:
 
     def Connect(self):
         self.s.enter(20, 1, self.Connect)
-
 
         if not self.isConnected:
             attempt = 0

@@ -9,15 +9,15 @@ from converter.UpdateEventHandle import get_ua_type
 from threading import Timer
 
 
-users_db = {
-    'user1': 'pw1',
-    'user2': 'pw2'
-}
+# users_db = {
+#     'user1': 'pw1',
+#     'user2': 'pw2'
+# }
 
 
-def user_manager(isession, username, password):
-    isession.user = UserManager.User
-    return username in users_db and password == users_db[username]
+# def user_manager(isession, username, password):
+#     isession.user = UserManager.User
+#     return username in users_db and password == users_db[username]
 
 
 class UA_SERVER:
@@ -32,12 +32,19 @@ class UA_SERVER:
         self.server.set_server_name(name)
 
 
-        self.server.set_security_IDs(["Username"])
-        self.server.user_manager.set_user_manager(user_manager)
+        # self.server.set_security_IDs(["Username"])
+        # from opcua.server.internal_server import InternalServer
+        # self.iserver = InternalServer(shelffile=None)
 
+        # import asyncio
 
-
+        # self.server.user_manager.set_user_manager(user_manager)
+        # print(self.server.bserver.clients())
+        # print(self.server.sockets())
         self.nmspc = self.server.register_namespace(namespace)
+
+        self.nmspc2 = self.server.register_namespace('User 2')
+
         self.objects = self.server.get_objects_node()
 
 
