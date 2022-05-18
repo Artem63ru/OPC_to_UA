@@ -32,6 +32,7 @@ class UA_SERVER:
         self.server.set_server_name(name)
         self.server_socket = socket.socket()
 
+
         # self.server.set_security_IDs(["Username"])
         # from opcua.server.internal_server import InternalServer
         # self.iserver = InternalServer(shelffile=None)
