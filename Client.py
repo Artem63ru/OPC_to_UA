@@ -11,10 +11,8 @@ from opcua import ua
 client = Client("opc.tcp://127.0.0.1:4851")
 # client = Client("opc.tcp://admin@localhost:4840/freeopcua/server/") #connect using a user
 try:
-    client.set_password('pw1')
-    client.set_user('user1')
-    client.connect()
 
+    client.connect()
     client.find_servers()
     # client.activate_session(username='user1', password='pw1', certificate=None)
     print(client.find_servers())

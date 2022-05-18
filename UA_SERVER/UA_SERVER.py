@@ -5,20 +5,20 @@ from opcua import ua, Server
 from opcua.server.user_manager import UserManager
 from opcua.ua import NodeIdType, NodeId
 from log.LOGS import LOGS
-from converter.UpdateEventHandle import get_ua_type
+from converter.UpdateEventHandle import get_ua_type,get_variant_type
 from threading import Timer
-
+import socket
 
 # users_db = {
 #     'user1': 'pw1',
 #     'user2': 'pw2'
 # }
 
-
+#
 # def user_manager(isession, username, password):
 #     isession.user = UserManager.User
 #     return username in users_db and password == users_db[username]
-
+#
 
 class UA_SERVER:
     def __init__(self, endpoint='opc.tcp://127.0.0.1:4850', name='GAZAUTO_DA_to_UA_converter',
@@ -30,13 +30,11 @@ class UA_SERVER:
         self.server = Server()
         self.server.set_endpoint(endpoint)
         self.server.set_server_name(name)
-
+        self.server_socket = socket.socket()
 
         # self.server.set_security_IDs(["Username"])
         # from opcua.server.internal_server import InternalServer
         # self.iserver = InternalServer(shelffile=None)
-
-        # import asyncio
 
         # self.server.user_manager.set_user_manager(user_manager)
         # print(self.server.bserver.clients())
@@ -47,13 +45,18 @@ class UA_SERVER:
 
         self.objects = self.server.get_objects_node()
 
-
-
-        # Добавление мигающего бита (True/False) проверка раюоты сервера
+        # Добавление мигающего бита (True/False) проверка работы сервера
         self.signal_point = self.objects.add_object(self.nmspc, 'Signal')
         self.signal_point_value = self.signal_point.add_variable(self.nmspc, "Status", True)
 
         self.MonitorList = {}
+
+    # def connection_user(self):
+
+
+
+
+
 
     def add_folder(self, folder_name, folder=None):
         if folder is None:
@@ -67,11 +70,11 @@ class UA_SERVER:
             self.MonitorList[value['Name']] = self.objects.add_variable(nodeid=nodeID,
                                                                         bname=value['Name'].replace(':', '.'),
                                                                         val=value['Value'],
-                                                                        varianttype=get_ua_type(value['Value']))
+                                                                        varianttype= get_variant_type(value['Type_value']))
         else:
             self.MonitorList[value['Name']] = folder.add_variable(nodeid=nodeID, bname=value['Name'].replace(':', '.'),
                                                                   val=value['Value'],
-                                                                  varianttype=get_ua_type(value['Value']))
+                                                                  varianttype= get_variant_type(value['Type_value']))
 
         return self.MonitorList[value['Name']]
 
@@ -108,6 +111,14 @@ class UA_SERVER:
         LOGS('UA_SERVER', 'Start UA SERVER! UA_HOST: {}'.format(self.endpoint), 'INFO')
         try:
             self.server.start()
+            # ip = self.endpoint.rpartition('//')[2].rpartition(':')[0]
+            # print((self.endpoint.rpartition('//')[2].rpartition(':')[1])[1:])
+            # self.server_socket.bind(("", int(self.endpoint.rpartition('//')[2].rpartition(':')[2])))
+            # self.server_socket.listen(1)
+            # is_client_authenfication = False
+            # conn, addres = self.server_socket.accept()
+            #
+            # print('connected:', addres)
             # print(self.server.get_namespace_array())
         except OSError as err:
             print('Error: ', err)

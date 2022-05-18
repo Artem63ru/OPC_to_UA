@@ -215,7 +215,7 @@ class DA_CLIENT:
                         continue
 
                     new_leaf['Value'] = values[1]
-
+                    new_leaf['Type_value'] = type(values[1]).__name__
                     # self.monitorItemsID.append(tag)
                 except Exception as err:
                     print('Add item error:: cannot add a tag: [ {} ]  '.format(tag), err)

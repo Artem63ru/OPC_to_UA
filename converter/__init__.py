@@ -25,7 +25,8 @@ def get_config(configFile='cfg.xml'):
 def intro():
     print('='*54)
     print(5 * '\t' + ' Gazprom Auto')
-    print( 4 * '\t' + '  Convertor, v.04.05 ' + str(4 * '\t'))
+    # Версии конвертора v.04.05  ,  v.13.05, v.18.05
+    print( 4 * '\t' + '  Convertor, v.18.05 ' + str(4 * '\t'))
 
     print('=' * 54)
 
@@ -69,6 +70,9 @@ def run():
         ua_serv = UA_SERVER(config['UA_HOST'], config['UA_SERVER_NAME'], config['UA_ROOT_NAMESPACE'])
         ua_serv.create_tree(da_client.GetTree())
         ua_serv.start()
+
+
+        # ua_serv.connection_user()
         da_client.s.run()
 
         def handleInit(handle):

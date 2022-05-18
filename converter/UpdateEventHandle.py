@@ -1,5 +1,6 @@
 from opcua import ua
 
+
 def get_ua_type(value):
     if value.__class__.__name__ == 'int':
         return ua.uatypes.VariantType.Int32
@@ -12,11 +13,27 @@ def get_ua_type(value):
     else:
         return None
 
+
+def get_variant_type(datatype):
+    if datatype == 'bool':
+        variant = ua.VariantType.Boolean
+    elif datatype == 'int':
+        variant = ua.VariantType.Int32
+    elif datatype == 'float':
+        variant = ua.VariantType.Float
+    elif datatype == 'str':
+        variant = ua.VariantType.String
+    else:
+        raise ValueError('"%s" datatype not implemented' % datatype)
+
+    return variant
+
+
 class UpdateEventHandler:
 
     def set_lists(self, ualist, dalist):
-        self.ualist=ualist
-        self.dalist=dalist
+        self.ualist = ualist
+        self.dalist = dalist
 
     def OnDataChange(self, TransactionID, NumItems, ClientHandles, ItemValues, Qualities, TimeStamps):
         i = 0
