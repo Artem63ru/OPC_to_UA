@@ -4,50 +4,10 @@ import argparse
 import xml.etree.ElementTree as ET
 from log.LOGS import LOGS
 import sched, time
-# import win32serviceutil
-# import win32service
-# import servicemanager
+
 
 s = sched.scheduler(time.time, time.sleep)
 
-#
-# class MyService:
-#     _svc_name_ = 'MyService'
-#     _svc_display_name_ = 'My Service display name'
-#
-#     def __init__(self):
-#         self.a = 0
-#         self.tim = time.localtime()
-#         self.running = None
-#
-#     def stop_service(self):
-#         """Stop the service"""
-#         self.running = False
-#
-#     def run_service(self):
-#         """Main service loop. This is where work is done!"""
-#         self.running = True
-#         self.tim = time.localtime()
-#         print('start сервиса', time.strftime("%H:%M:%S", self.tim))
-#         run()
-#
-#
-# class MyServiceFramework(win32serviceutil.ServiceFramework):
-#     _svc_name_ = 'MyService'
-#     _svc_display_name_ = 'My Service display name'
-#
-#     def SvcDoRun(self):
-#         self.service_impl = MyService()
-#         self.ReportServiceStatus(win32service.SERVICE_START_PENDING)
-#         self.ReportServiceStatus(win32service.SERVICE_RUNNING)
-#         self.service_impl.run_service()
-#
-#     def SvcStop(self):
-#         """Stop the service"""
-#         self.ReportServiceStatus(win32service.SERVICE_STOP_PENDING)
-#         self.service_impl.stop_service()
-#         self.ReportServiceStatus(win32service.SERVICE_STOPPED)
-#
 
 def restart_connection(object_cl):
     s.enter(5, 1, restart_connection)
@@ -62,7 +22,13 @@ def get_config(configFile='cfg.xml'):
         res[child.tag] = child.text
 
     return res
+def intro():
+    print('='*54)
+    print(5 * '\t' + ' Gazprom Auto')
+    # Версии конвертора v.04.05  ,  v.13.05, v.18.05
+    print( 4 * '\t' + '  Convertor, v.18.05 ' + str(4 * '\t'))
 
+    print('=' * 54)
 
 def run():
     LOGS('Converter/run', 'Run Convertor ', 'INFO')
@@ -104,6 +70,9 @@ def run():
         ua_serv = UA_SERVER(config['UA_HOST'], config['UA_SERVER_NAME'], config['UA_ROOT_NAMESPACE'])
         ua_serv.create_tree(da_client.GetTree())
         ua_serv.start()
+
+
+        # ua_serv.connection_user()
         da_client.s.run()
 
         def handleInit(handle):
